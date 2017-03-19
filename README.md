@@ -15,10 +15,10 @@
 * include an .eslintrc
 * include a .gitignore
  * **add the string `db` to a new line in your gitignore file so that you don't include the db directory monogd is storing its files in!**
-* create a gulpfile
- * have a lint task for running eslint
- * have a test task for running mocha
- * have a default task for running the lint and mocha tasks
+* include any necessary NPM scripts
+  * have a lint script for running eslint
+  * have a test script for running mocha
+  * have a default script for running the lint and mocha tasks
 * a readme with a project description and api docs
 
 # Directions
