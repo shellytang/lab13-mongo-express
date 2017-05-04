@@ -10,7 +10,7 @@ const app = module.exports = express();
 const router = express.Router();
 const PORT = process.env.PORT || 3000;
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/cat.env';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/cat-env';
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
