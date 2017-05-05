@@ -17,7 +17,7 @@ describe('Server module', () => {
     app.close();
     done();
   });
-
+// ==POST===
   describe('POST method', () => {
     describe('/api/cat route', () => {
       describe('a properly formatted request', () => {
@@ -82,7 +82,7 @@ describe('Server module', () => {
       });
     });
   });
-// ============
+// =======GET=====
   describe('GET method', () => {
 
     let resource;
@@ -139,6 +139,16 @@ describe('Server module', () => {
         .get(`/api/dog}`)
         .end((err, res) => {
           expect(res.status).to.equal(404);
+          done();
+        });
+      });
+    });
+    describe('/api/cat route', () => {
+      it('should return an array of all cats', done => {
+        chai.request(server)
+        .get(`/api/cat`)
+        .end((err, res) => {
+          expect(res).to.be.a('object');
           done();
         });
       });
